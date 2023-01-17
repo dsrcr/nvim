@@ -19,6 +19,9 @@ option.updatetime = 50;
 vim.g.mapleader = (" ")
 keymap.set("n", "<leader>e", vim.cmd.Ex)
 keymap.set('n', '<leader>f', builtin.find_files, {})
+keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 --Treesitter
 require'nvim-treesitter.configs'.setup {
@@ -31,10 +34,10 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- Setup Editor Theme
-function theme(color)
+function Theme(color)
     color = color or "zephyr"
     vim.cmd.colorscheme(color)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
 end
-theme()
+Theme()
