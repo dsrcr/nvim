@@ -1,5 +1,5 @@
 # My Neovim Config
-![nvim](~/nvim.png) 
+![nvim](https://user-images.githubusercontent.com/91333841/212791030-440472c6-1568-4754-9181-c47e69bc42d6.png)
 
 ### Introduction
 Run checkhealth in your Neovim
