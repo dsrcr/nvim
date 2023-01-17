@@ -42,5 +42,9 @@ return require('packer').startup(function(use)
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
         ft = { "markdown" },
     })
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
 end)
