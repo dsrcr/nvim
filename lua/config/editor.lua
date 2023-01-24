@@ -24,7 +24,7 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 --Treesitter
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "javascript", "typescript", "rust", "c", "lua", "vim", "help" },
     sync_install = false,
     auto_install = true,
@@ -37,7 +37,8 @@ require'nvim-treesitter.configs'.setup {
 function Theme(color)
     color = color or "zephyr"
     vim.cmd.colorscheme(color)
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
+
 Theme()

@@ -48,4 +48,3 @@ function PrintDiagnostics(opts, bufnr, line_nr, client_id)
 end
 
 vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
