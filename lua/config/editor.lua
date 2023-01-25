@@ -1,6 +1,7 @@
 local builtin = require('telescope.builtin');
 local option = vim.opt;
 local keymap = vim.keymap;
+vim.g.vimtex_view_method = 'zathura'
 
 --Basic Editor Setup
 option.nu = true;
