@@ -15,6 +15,7 @@ option.swapfile = false;
 option.hlsearch = false;
 option.incsearch = true;
 option.updatetime = 50;
+vim.g.neovide_refresh_rate = 120
 
 --Keybinds
 vim.g.mapleader = (" ")
