@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'sbdchd/neoformat'
     use 'lervag/vimtex'
+    use 'EdenEast/nightfox.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }

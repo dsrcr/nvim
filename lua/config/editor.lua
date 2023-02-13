@@ -37,10 +37,10 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Setup Editor Theme
 function Theme(color)
-    color = color or "zephyr"
+    color = color or "terafox"
     vim.cmd.colorscheme(color)
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 Theme()
