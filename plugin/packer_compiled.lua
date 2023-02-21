@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/ds/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/home/ds/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/ds/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -142,15 +147,10 @@ _G.packer_plugins = {
     path = "/home/ds/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  neoformat = {
+  ["null-ls.nvim"] = {
     loaded = true,
-    path = "/home/ds/.local/share/nvim/site/pack/packer/start/neoformat",
-    url = "https://github.com/sbdchd/neoformat"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/home/ds/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
+    path = "/home/ds/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -183,20 +183,25 @@ _G.packer_plugins = {
     path = "/home/ds/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["tabnine-nvim"] = {
+    loaded = true,
+    path = "/home/ds/.local/share/nvim/site/pack/packer/start/tabnine-nvim",
+    url = "https://github.com/codota/tabnine-nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/ds/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/home/ds/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
+  },
   vimtex = {
     loaded = true,
     path = "/home/ds/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
-  },
-  ["zephyr-nvim"] = {
-    loaded = true,
-    path = "/home/ds/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
-    url = "https://github.com/glepnir/zephyr-nvim"
   }
 }
 

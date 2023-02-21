@@ -4,31 +4,26 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use 'neovim/nvim-lspconfig'
     use 'lukas-reineke/indent-blankline.nvim'
-    use 'sbdchd/neoformat'
     use 'lervag/vimtex'
-    use 'EdenEast/nightfox.nvim'
+    use 'morhetz/gruvbox'
+    use 'airblade/vim-gitgutter'
+    use 'jose-elias-alvarez/null-ls.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use({
-        'glepnir/zephyr-nvim',
-        requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
-    })
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
             { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
-
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
             { 'saadparwaiz1/cmp_luasnip' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lua' },
-
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
         }
@@ -49,5 +44,7 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+    use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+
 
 end)

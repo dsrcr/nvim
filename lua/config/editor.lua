@@ -15,15 +15,21 @@ option.swapfile = false;
 option.hlsearch = false;
 option.incsearch = true;
 option.updatetime = 50;
+option.laststatus = 0;
+option.signcolumn = "number";
+vim.g.gitgutter_set_sign_backgrounds = 1;
 vim.g.neovide_refresh_rate = 120
+
 
 --Keybinds
 vim.g.mapleader = (" ")
 keymap.set("n", "<leader>e", vim.cmd.Ex)
 keymap.set('n', '<leader>f', builtin.find_files, {})
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap.set("n", "<leader>a", "ggVG")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("n", "<leader>q", [[!prettier --stdin-filepath %]])
 
 --Treesitter
 require 'nvim-treesitter.configs'.setup {
@@ -37,10 +43,11 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Setup Editor Theme
 function Theme(color)
-    color = color or "terafox"
+    vim.cmd.highlight({ "GitGutterAdd", "ctermbg=none" })
+    vim.cmd.highlight({ "GitGutterDelete", "ctermbg=none" })
+    vim.cmd.highlight({ "GitGutterChange", "ctermbg=none" })
+    color = color or "gruvbox"
     vim.cmd.colorscheme(color)
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
+    end
 
 Theme()
