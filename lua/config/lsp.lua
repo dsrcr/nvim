@@ -12,7 +12,7 @@ lsp.ensure_installed({
 })
 
 require('tabnine').setup({
-  disable_auto_comment=true, 
+  disable_auto_comment=true,
   accept_keymap="<Tab>",
   dismiss_keymap = "<C-]>",
   debounce_ms = 800,

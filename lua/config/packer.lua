@@ -7,7 +7,9 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     use 'morhetz/gruvbox'
     use 'airblade/vim-gitgutter'
+    use 'catppuccin/nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
+    use 'windwp/nvim-ts-autotag'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }

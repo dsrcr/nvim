@@ -1,4 +1,5 @@
 local builtin = require('telescope.builtin');
+local autotag = require('nvim-ts-autotag').setup();
 local option = vim.opt;
 local keymap = vim.keymap;
 vim.g.vimtex_view_method = 'zathura'
@@ -17,6 +18,8 @@ option.incsearch = true;
 option.updatetime = 50;
 option.laststatus = 0;
 option.signcolumn = "number";
+option.autoindent = true;
+option.clipboard = "unnamedplus";
 vim.g.gitgutter_set_sign_backgrounds = 1;
 vim.g.neovide_refresh_rate = 120
 
@@ -29,7 +32,6 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 keymap.set("n", "<leader>a", "ggVG")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-keymap.set("n", "<leader>q", [[!prettier --stdin-filepath %]])
 
 --Treesitter
 require 'nvim-treesitter.configs'.setup {
@@ -43,10 +45,7 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Setup Editor Theme
 function Theme(color)
-    vim.cmd.highlight({ "GitGutterAdd", "ctermbg=none" })
-    vim.cmd.highlight({ "GitGutterDelete", "ctermbg=none" })
-    vim.cmd.highlight({ "GitGutterChange", "ctermbg=none" })
-    color = color or "gruvbox"
+    color = color or "catppuccin"
     vim.cmd.colorscheme(color)
     end
 
