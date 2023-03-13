@@ -6,9 +6,9 @@ vim.g.vimtex_view_method = 'zathura'
 
 --Basic Editor Setup
 option.nu = true;
-option.tabstop = 4;
-option.softtabstop = 4;
-option.shiftwidth = 4;
+option.tabstop = 2;
+option.softtabstop = 2;
+option.shiftwidth = 2;
 option.expandtab = true;
 option.smartindent = true;
 option.wrap = false;
@@ -45,7 +45,7 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Setup Editor Theme
 function Theme(color)
-    color = color or "catppuccin"
+    color = color or "gruvbox"
     vim.cmd.colorscheme(color)
     end
 
