@@ -1,12 +1,16 @@
 local telescope = require('telescope.builtin');
 local autotag = require('nvim-ts-autotag').setup();
+local js_based_languages = { "typescript", "javascript", "typescriptreact", "javascriptreact" }
+local option = vim.opt;
+local keymap = vim.keymap;
+local dap = require("dap")
 
+vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_compiler_method = 'latexrun'
 require("dap-vscode-js").setup({
   debugger_path = "(runtimedir)/site/pack/packer/opt/vscode-js-debug", -- Path to vscode-js-debug installation.
   adapters = { 'chrome', 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node', 'chrome' }, -- which adapters to register in nvim-dap
 })
-
-local js_based_languages = { "typescript", "javascript", "typescriptreact", "javascriptreact" }
 
 for _, language in ipairs(js_based_languages) do
   require("dap").configurations[language] = {
@@ -46,11 +50,6 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close({})
 end
 
-local option = vim.opt;
-local keymap = vim.keymap;
-local dap = require("dap")
-vim.g.vimtex_view_method = 'zathura'
-
 --Basic Editor Setup
 option.nu = true;
 option.tabstop = 2;
@@ -75,6 +74,7 @@ vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl 
 -- Gui options
 vim.o.guifont = "Fira Code:h7"
 vim.g.neovide_refresh_rate = 120
+vim.g.neovide_transparency = 0.8
 
 --Keybinds
 vim.g.mapleader = (" ")
