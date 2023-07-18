@@ -39,6 +39,13 @@ option.termguicolors = true;
     highlight signcolumn guibg=none
   ]])
 
+vim.cmd([[
+  augroup RunPfOnSave
+  autocmd!
+  autocmd BufWritePost *.js,*.ts,*.jsx,*json !prettier --write .
+  augroup END
+]])
+
 -- Gui options
 vim.o.guifont = "Fira Code:h7"
 vim.g.vimtex_view_method = 'zathura'
@@ -108,7 +115,7 @@ end
 
 --Treesitter
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "typescript", "rust", "c", "lua", "vim", "help", "php" },
+  ensure_installed = { "javascript", "typescript", "rust", "c", "lua", "vim", "help" },
   sync_install = false,
   auto_install = true,
   highlight = {
