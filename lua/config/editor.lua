@@ -29,7 +29,7 @@ option.clipboard = "unnamedplus";
 option.termguicolors = true;
 
 -- Setup Editor Theme
-  vim.cmd.colorscheme("catppuccin")
+  vim.cmd.colorscheme("gruvbox")
   vim.cmd([[
     highlight GitGutterAdd ctermbg=none
     highlight GitGutterAdd guibg=none
