@@ -54,3 +54,4 @@ The last step is running this command in your neovim
 :PackerSync
 ```
 This command should pull everything you need
+
