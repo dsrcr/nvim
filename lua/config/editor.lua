@@ -40,22 +40,27 @@ option.termguicolors = true;
   ]])
 
 -- run specific commands after different file extensions
-
 vim.cmd([[
   augroup RunPfOnSave
   autocmd!
   autocmd BufWritePost *.js,*.ts,*.jsx,*json !prettier --write .
-  augroup END
-]])
-
-vim.cmd([[
-  augroup RunPfOnSave
-  autocmd!
   autocmd BufWritePost *.tex :VimtexCompile
+  autocmd BufWritePost *.md :MarkdownPreview
   augroup END
 ]])
 
-
+-- vim.cmd([[
+--   augroup RunPfOnSave
+--   autocmd!
+--   augroup END
+-- ]])
+--
+-- vim.cmd([[
+--   augroup RunPfOnSave
+--   autocmd!
+--   autocmd BufWritePost *.tex :VimtexCompile
+--   augroup END
+--]])
 
 -- Gui options
 vim.o.guifont = "Fira Code:h7"
